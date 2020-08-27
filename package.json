@@ -1,0 +1,26 @@
+{
+  "name": "read-me-generator",
+  "version": "1.0.0",
+  "description": "Create a custom ReadMe file using this Read-Me-Generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caitlinritawhite/Read-Me-Generator.git"
+  },
+  "keywords": [
+    "read",
+    "me"
+  ],
+  "author": "Caitlin White",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caitlinritawhite/Read-Me-Generator/issues"
+  },
+  "homepage": "https://github.com/caitlinritawhite/Read-Me-Generator#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
+}
