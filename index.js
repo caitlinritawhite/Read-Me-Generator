@@ -20,44 +20,62 @@ const userPrompt = async () => {
       type: "input",
       message: "Installation Instructions",
       name: "Installation",
+      default: "No installation information is available",
     },
     {
       type: "input",
       message: "Usage Information",
       name: "Usage",
+      default: "No usage information is available",
     },
     {
       type: "list",
-      message: "Choose a license for your application...",
       name: "License",
-      choices: ['MIT', 'mpl-2.0', 'apache-2.0', 'gpl-3.0', 'unlicense']
+      message: "Choose a License for your application please...",
+      choices: ["MIT", "ISC", "Unlicense"],
     },
     {
       type: "input",
       message: "Contribution Guidelines",
       name: "Contribution",
+      default: "No contribution information is available",
     },
     {
       type: "input",
       message: "Test Instructions",
       name: "Test",
+      default: "No testing information is available",
     },
     {
       type: "input",
       message: "What is your Github username?",
       name: "Github",
+      filter: function (answers) {
+        if (answers) {
+          return `https://github.com/${answers}`;
+        } else {
+          return "No GitHub link was entered";
+        }
+      },
     },
     {
       type: "input",
       message: "What is your email address?",
       name: "Email",
+      filter: function (answers) {
+        if (answers) {
+          return `${answers}`;
+        } else {
+          return "No email address was entered";
+        }
+      },
     },
   ]);
 
-  
-await writeFileAsync(
-  "./README.md",
-  `
+  await writeFileAsync(
+    "./README.md",
+    `
+  [![License: ISC](https://img.shields.io/badge/License-${response.License}-blue.svg)](https://opensource.org/licenses/${response.License})
   # ${response.Title}   
 
   ## Table of Contents
@@ -97,14 +115,11 @@ await writeFileAsync(
 
 
   ## Questions:
-  Feel free to contact me with any questions at ${response.Email} or [visit my Github page](https://github.com/${response.Github})
+  Feel free to contact me with any questions at ${response.Email} or [visit my Github page](${response.Github})
  
 `
-);
-
-console.log(response);
+  );
 };
-
 
 try {
   userPrompt().catch((error) => {
