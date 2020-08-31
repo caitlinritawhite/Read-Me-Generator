@@ -1,5 +1,7 @@
 
   # Caitlin's Read Me Generator   
+ [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+  # Caitlin's Read Me Generator 5000   
 
   ## Table of Contents
   [Title](#title)  
@@ -7,36 +9,35 @@
   [Installation](#installation)  
   [Usage](#usage)  
   [License](#license)  
-  [Github](#github)  
-  [Email](#email)  
+  [Github](#questions)  
+  [Email](#questions)  
   
 
   ## Description:   
    
-   No   
+   This program allows users to answer questions to make a custom, professional ReadMe file   
 
 
   ## Installation:   
 
-  No thanks
+  None
   
   ## Usage:   
 
-  ok
+  No usage information is available
 
   ## License:   
 
-  MIT
+  ISC
 
   ## Contribution:   
 
-  No
+  No contribution information is available
 
   ## Test Instructions:   
 
-  None
+  No testing information is available
 
 
   ## Questions:
   Feel free to contact me with any questions at caitlinritawhite@gmail.com or [visit my Github page](https://github.com/caitlinritawhite)
- 
